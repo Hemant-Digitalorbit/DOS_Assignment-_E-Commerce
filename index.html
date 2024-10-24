@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FontAwesome link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+    <!-- Add TailwindCSS in HTML -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Add CSS file to HTML -->
+    <link href="style.css" rel="stylesheet" >
+
+    <link rel="icon" href="https://s3-alpha-sig.figma.com/img/fd77/4c97/1ba2c029ff09694eb391cd1b4e6accbb?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gH26GYRE5i8Q20CnZVvMDcPYTBVEd81usxFxGNBSFjhQVOJhyVosnpe5i-Vvd6qxWo3gbI952zFbfwuoqNcu4OhFotEfrtdAwJ1HQLToKP295LlpnYEJVDP1tkGbkMisiPLKou8mCy7PuLYF98iuVeKGMmewzKeErgT2~MDoyoC~8bwAb6eKQZMaJLkrIp57ZzsOCDV5Zkz2YoPDbuFW9UPpGklaOqHzsUUdHb1Nn9o6wDN~HvQcIc-huRX-uHcrKU9sM0z5609cuG3sBC-pCHj3PbEKozrx7TXRXI8CMnGOKkusaCF-4BOl4Ydt0283Mpgf~z0WcfLowzjO2D-TMg__" >
+
+    <title>E-commerce</title>
+</head>
+<body>
+
+  <!-- NavBar -->
+  <header id="navBar">
+    <nav>
+    <div class="logo">
+        <a><img src="https://s3-alpha-sig.figma.com/img/fd77/4c97/1ba2c029ff09694eb391cd1b4e6accbb?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OXjGuidNruDSr64O~X8e~5O786yeNYW9dYjBhXX2fDOqoS7k43iYAO8lyjBQhU01XV3QSZr0fCPMhSFTLKTfTSycg840wNdv3sO5S0iBB42G5GXTzCpkXUmUzK6bo2UKss-0NS7QdslgP29pGcZFsrslXOnXwYGcrx71Z~IVYGI23zxOvsXK1PP1xeAW0-r7nbw9OL7Crro7ul~X7N0LscsZV-sZBEZiqKbSEf010BeSTnd0QwNv4Yq3x~Xbfr4F4VbobS3isbHF3w7TjS0OfXteFUrKdUYlx5ZBTEDrz7NG0CotKltwsHOnFtloFKAksr36NtKlHLrDQTKSAcFqfw__" alt="logo_of_website" /></a>
+    </div>
+
+    <!-- windows navbar -->
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="viewallproducts.html">Shop</a></li>
+        <li class="contact"><a href="contact.html">Contact</a></li>
+        <li><a href="new&featured">New & Featured</a></li>
+        <li><a href="sale">Sale</a></li>
+    </ul>
+
+    <!-- windows form -->
+    <div>
+        <form class="search-bar" action="/search" method="get">
+        <i class="fas fa-search"></i>
+        <input class="searchInput" type="text" name="search" placeholder="Search..." required/>
+        </form>
+    </div>
+
+    <!-- window icons -->
+    <div class="nav-icons">
+        <img class="w-8 h-8 cursor-pointer" src="https://img.icons8.com/?size=100&id=j1b8nUSGHfe0&format=png&color=000000" />
+        <a href="cartpage.html"><img class="w-7 h-7 cursor-pointer" src="https://img.icons8.com/?size=100&id=3686&format=png&color=000000" /></a>
+    </div>
+
+    <!-- mobile icons -->
+    <div class="mob-view">
+        <div class="mobile-nav-icons">
+            <img class="search-btn" src="https://img.icons8.com/?size=100&id=lwZinoeNcL3F&format=png&color=000000" />
+            <img src="https://img.icons8.com/?size=100&id=j1b8nUSGHfe0&format=png&color=000000" />
+            <a href="cartpage.html"><img src="https://img.icons8.com/?size=100&id=3686&format=png&color=000000"/></a>
+        </div> 
+
+        <div class="toggle-menu">
+            <img src="https://img.icons8.com/?size=100&id=16247&format=png&color=000000" />
+        </div>
+    </div>
+
+    <!-- mobile navbar -->
+    <div class="mobile-nav-links">
+        <button class="close-button">
+        &times;
+        </button>
+        <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="viewallproducts.html">Shop</a></li>
+        <li class="contact"><a href="contact.html">Contact</a></li>
+        <li><a href="new&featured">New & Featured</a></li>
+        <li><a href="sale">Sale</a></li>
+        </ul>
+    </div>  
+</nav>
+
+</header>
+
+  <!-- Search Form For Mobile View -->
+  <div class="relative hidden show-mobile-form bg-[#CEC5BC82] top-0 h-20 flex justify-center items-center">
+    
+    <form class="mobile-search-bar space-x-2" method="get">
+      <i class="absolute fas fa-search icon"></i>
+      <input class="search-input w-full h-full" type="text" name="search" placeholder="Search..."  required/>
+    </form>
+
+    <div class="search-result absolute w-full max-h-80 bg-white shadow-lg mt-2 px-2 z-10 overflow-y-auto scroll-smooth"></div>
+
+  </div>
+
+  <!-- Banner -->
+  <section id="banner"> 
+    <div class="relative max-w-7xl mx-auto hidden md:block">
+      <img class="w-full h-[480px] md:mt-10 object-cover bg-no-repeat transform -scale-x-100" 
+          src="https://s3-alpha-sig.figma.com/img/c9fc/1c9f/f46f81234a252ed26809b1c7b60d275f?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Rs5f1lbgjSGd43lr9KtF-AUKe1lRvIyJy9bjDBdYZyjbsikz3zJ2LT2ypJKg9MulQk7SMm-3aQ-5AUXAkw1L8~d5hg6QCXQEWNreDbLNck8jGIyrBFiGHqiqI3fxKav-kEBz7qWSY6ttG~odPh0tf8zU-JHtmoIocytCUmD46abFrtz2tdiv4rK5KvFzlS2rzHfSFJLkMDY6GYU5JWHh7Ri2Hr8JlpDKcJBdy0VWqIkb2wBLqdNZC2GB2rTy8tKEut~4DhuqmO4cDRhsH5cXXptaXvC7kKTEtEEk94HkIScuo3m9eEj8ttMLrAhxdhdMKz634RQkENtdZhUm5wH6DA__" alt="banner_image" />
+      <div class="absolute top-52  left-20 space-y-8">
+        <h3 class="text-white font-[600] text-5xl">Fall Saeson <br>Fashion 2024</h3>
+        <button class="border-2 bg-[#3B3B3B] text-white py-2 px-4"><a href="viewallproducts.html">Shop Now</a></button>
+      </div>
+    </div>
+
+    <!-- For Mobile View -->
+    <div class="md:hidden block flex flex-col max-w-7xl mx-14">
+        <h3 class="text-[#3B3B3B] text-3xl text-center mt-10 mb-4">Fall Saeson <br>Fashion 2024</h3>
+      <div>
+          <div>
+            <img src="https://s3-alpha-sig.figma.com/img/4ab4/4db9/7f9d365c468997d36860452cb1beb29c?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gMPrjN8~uXtJiGThezBfs3AcvNt2k4AKuV4HYsfAIbup66fkQZbbBELjkHxZJoMSuWWXn4KDKpUQ0wnkeCgALnuO7x2c546agPy0byH3XTRcFnc6qKi1tMh4FEEN1By9eSLVIRSwd4H-qsMxqF327yq7lF5tLsmx~sfigUgtS7sNzu8k1ZcW-naLjkfEN8yhIuDkcex~W2erqbSWgSytWzg38elc1guuWaRl6Ft2jL6iKUIS6J42wpM6Yueutm0gCY3ZWNgC6AFHbile-R9-F4CzOt6T8LKAIsnMvV-3JLgGyuBqHz-t8e4xMYFiJuSTjtGtPovXzhYvh5gDBYeydg__" />
+          </div>
+          <div class="flex justify-center items-center mt-10">
+            <button class="bg-[#3B3B3B] text-white py-2 px-6">Shop Now</button>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Collection -->
+  <section id="collection">
+    <div class="hidden md:block max-w-7xl mx-auto mt-14">
+      <button class="bg-[#3B3B3B] text-white py-1 px-2 hover:bg-gray-700">New Collection</button>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[36px]">What's New?</p>
+        <div class="flex space-x-4 ml-auto">
+          <button><i class="fa-solid fa-chevron-left bg-gray-200 rounded-full p-2"></i></i></button>
+          <button><i class="fa-solid fa-chevron-right bg-gray-200 rounded-full p-2"></i></button>
+        </div>
+      </div>
+      <div class="flex flex-col justify-center gap-8 mt-8">
+        <div class="flex gap-8">
+          <div class="relative w-full lg:w-[584px] h-[444px] object-cover">
+              <img class="w-[415px] h-full object-cover ml-auto" src="https://s3-alpha-sig.figma.com/img/69e3/e0b6/98a84ea0114b5ecd56e3aab37d63e812?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GOfFkLxWI8-rC9PZFCwNDDXRZEWBl6NU9hnJwYaOs08q~-860ni7ftstj19v1hJKUvBbLn4mGs2StQrzlsdnF8cAP~hY7lCtbviGMf8wALi~0FMKlY1VUq6qJgKfSPTrRth0zH7RhMVWcYR0RCCAcL~LTj9HKH9ue4vdAl2E5E5Mg-4PdMNRtJhd3vQCf1JKGEmhjAK3DoZJyRyLpE~5LfOehPUyZT45KJ8hpJimBofWWJzq51b91xRjHiAeqJPzOBpZft7HLgmalXtqCAJrSJBVuHNoX32Xgx-Rdf9dPDONyf-6hWsxxlS4yCHpdIUc7EAU8-etno~q-1wbM6Tzbg__" />
+              <div class="absolute w-[169px] h-full bg-[#3B3B3B] bottom-0 left-0 text-white p-4 space-y-10">
+                <p style="font-family: Georgia; line-height: 1.5;" class="text-lg mt-10">Plain Knit <br> Sleeveless <br> Jumper</p>
+                <p style="font-family: Georgia; line-height: 1.5;">Rs. 2500</p>
+              </div>
+          </div>
+          <div class="relative w-[652px] h-[444px]">
+            <img class="w-full h-full object-cover" src="https://s3-alpha-sig.figma.com/img/413f/fe59/6c3f288e8b23597dfac11f0f5316da99?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=oqmtCj1-HU7xuc1rn3~ob~xr3dvf-adqsuQ1Kre~1nwCiqCr2mn1-gxZCQSEBk4FpN-QYkJseToPAH~2KEmUppvzvhRFZ~-ybKdc4DSUIzdKhC2aM8k3CrZHlEpgpUS5JL09wtvdLrrljZucqR6Y2WV-9o5c55eAtIFI78ZYXXUxC67dEmij5G-NEfs6C-89EhYtplbRBWVUwdwE~uoRepkXLVbLo2eXy801Wt88HwY7anaDC1akSYPHl3sAXsivebLgnQ-wBg~khqb7DieX8Micex4leYwTe6Wq5-W6h95baH8I8TGdb2MDq~4re9-w2WQcjEFLgG4a6Ctkuex5wQ__" />
+            <div class="absolute bottom-8 left-4 space-y-4">
+              <p style="font-family: Georgia; line-height: 1.5;" class="text-lg">Solid Black <br>Denim Jacket</p>
+              <p style="font-family: Georgia; line-height: 1.5;">Rs. 2500</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex gap-8">
+          <div class="relative w-full lg:w-[432px] h-[540px]">
+            <img src="https://s3-alpha-sig.figma.com/img/430c/c4e1/a70e94fded42900b48bffb367c730634?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Uq4mQYFD3GVB5aism6eAbhf04cWhmsT20AlWPW-6lERaSkDd2X4k4UY3up2-sYAeK90GI5JFd3PUgNG4VdGQJfEHGr9qHrqU6FUq5C0Xmnz-iFCXKvQvVyXunvtAO9cvJFPDFoT8-bEf5QwJme3iMYqKg3HzMr8QhdxQn~UqyfRQNQ5V0bP9oSlMTpvgK73EtCPPuHREzadbESow2v2zvmvvMh1RccMHGwYRRZtO4NxYG2gVnq85lW-B~DI8~3~PedCHv-jABcoN9J4Hq6h9mtoDiWTXDztubl5Gj~RbMzOcCJrhzVlFKtLnadSKmfYBTJfEMvpuLjx30BXma-gZ5Q__" />
+            <div class="absolute bg-[#3B3B3B] w-full h-1/4 bottom-0 flex items-center justify-center">
+              <a href="#" class="text-white underline text-3xl">View Collection</a>
+            </div>
+          </div>
+          <div class="relative w-[804px] h-[540px] object-cover">
+            <img class="w-[678px] h-full object-cover ml-auto" src="https://s3-alpha-sig.figma.com/img/0571/bcae/a47b5c52af2e6bfc38c9465bea6b6d1e?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=iXOdodc0uokXdu0zDMWhzmIgoailuUSxFPkC2ut6EKeEMNoskCmPCAFDfp-qhA~IKaMUooH~IIKp1Vv-EXyrymB72OHvFqUh3MIYv9H-EfHfSoRipejuJTjwbD4g6kNvW5kpfZiQXZPc1SXmumh~OpebUGO5V5OfpN-~4OouBs9u8Afpf~jsvqdLsvSiM3p9DaOyj9DnNlkhI4dJFOqKVSLIFdOxQDR4I3iLaF9moycyhV8zjxYVitowAwAVJoldTD62gSc6XmhBqPqP9mP2apsVjNNGEE5hX8Ekp~rbVENsvVOO3zWPArEGESwhMhVLI-4xVewOs2x-0Au4K~h9Mw__" />
+            <div class="absolute bg-[#E6E1DD] w-[169px] h-full bottom-0 left-0 p-4 space-y-10">
+              <p style="font-family: Georgia; line-height: 1.5;" class="text-lg mt-20">Green<br> Woolean<br> Sweater</p>
+              <p style="font-family: Georgia; line-height: 1.5;">Rs. 2500</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- For Mobile Versions -->
+    <div class="max-w-7xl mx-auto block md:hidden">
+        <button class="bg-[#3B3B3B78] text-white py-1 px-2 flex justify-center items-center mx-auto mt-10">New Collection</button>
+        <p class="text-3xl text-center mt-4">What's New?</p>
+
+        <div class="products max-w-7xl mx-auto flex items-center grid grid-cols-2 place-items-center md:px-0 md:gap-0 overflow-x-auto scroll-smooth">
+        </div>
+        <div class="md:hidden block flex justify-center my-10">
+          <button class="viewall-btn bg-[#3B3B3B] text-white px-4 py-1 cursor-pointer">
+            View All
+          </button>
+        </div>
+    </div>
+
+  </section>
+
+  <!-- Sale -->
+  <section id="sale">
+    <div class="hidden md:block max-w-7xl mx-auto mt-14">
+      <button class="bg-[#3B3B3B] text-white text-start px-2 w-16 h-8 hover:bg-gray-700">Sale</button>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[36px]">Upto 50% OFF</p>
+        <div class="flex items-center justify-center space-x-4 ml-auto">
+          <a class="viewall-btn underline text-sm text-center cursor-pointer">View All</a>
+          <button class="scrollLeft"><i class="fa-solid fa-chevron-left bg-gray-200 rounded-full p-2"></i></i></button>
+          <button class="scrollRight"><i class="fa-solid fa-chevron-right bg-gray-200 rounded-full p-2"></i></button>
+        </div>
+      </div>
+
+      <div class="products max-w-7xl mx-auto flex items-center overflow-x-auto scroll-smooth"></div>
+
+    </div>
+
+    <!-- For Mobile Versions -->
+    <div class="max-w-7xl mx-auto block md:hidden">
+      <button class="bg-[#3B3B3B78] text-white py-1 px-2 flex justify-center items-center mx-auto mt-10">Sale</button>
+      <p class="text-3xl text-center mt-4">Upto 50% OFF</p>
+
+      <div class="products max-w-7xl mx-auto flex items-center grid grid-cols-2 place-items-center md:px-0 md:gap-0 overflow-x-auto scroll-smooth">
+      </div>
+      <div class="md:hidden block flex justify-center my-10">
+        <button class="viewall-btn bg-[#3B3B3B] text-white px-4 py-1 cursor-pointer">
+          View All
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Trending -->
+  <section id="trending">
+    <div class="hidden md:block max-w-7xl mx-auto mt-14">
+      <button class="bg-[#3B3B3B] text-white text-start px-2 w-auto h-8 hover:bg-gray-700">Trending</button>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[36px]">In the Limelight</p>
+        <div class="flex items-center justify-center space-x-4 ml-auto">
+          <a class="viewall-btn underline text-sm text-center cursor-pointer">View All</a>
+          <button class="scrollLeft"><i class="fa-solid fa-chevron-left bg-gray-200 rounded-full p-2"></i></i></button>
+          <button class="scrollRight"><i class="fa-solid fa-chevron-right bg-gray-200 rounded-full p-2"></i></button>
+        </div>
+      </div>
+      
+      <div class="products max-w-7xl mx-auto flex items-center overflow-x-auto scroll-smooth"></div>
+
+    </div>
+
+    <!-- For Mobile Versions -->
+    <div class="max-w-7xl mx-auto block md:hidden">
+      <button class="bg-[#3B3B3B78] text-white py-1 px-2 flex justify-center items-center mx-auto mt-10">Trending</button>
+      <p class="text-3xl text-center mt-4">In the Limelight</p>
+
+      <div class="products max-w-7xl mx-auto flex items-center grid grid-cols-2 place-items-center md:px-0 md:gap-0 overflow-x-auto scroll-smooth">
+      </div>
+      <div class="md:hidden block flex justify-center my-10">
+        <button class="viewall-btn bg-[#3B3B3B] text-white px-4 py-1 cursor-pointer">
+          View All
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Best-Sellers -->
+  <section id="best-sellers">
+    <div class="hidden md:block max-w-7xl mx-auto mt-14">
+      <button class="bg-[#3B3B3B] text-white text-start px-2 w-auto h-8 hover:bg-gray-700">Best Sellers</button>
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-[36px]">Most Shopped</p>
+        <div class="flex items-center justify-center space-x-4 ml-auto">
+          <a class="viewall-btn underline text-sm text-center cursor-pointer">View All</a>
+          <button class="scrollLeft"><i class="fa-solid fa-chevron-left bg-gray-200 rounded-full p-2"></i></i></button>
+          <button class="scrollRight"><i class="fa-solid fa-chevron-right bg-gray-200 rounded-full p-2"></i></button>
+        </div>
+      </div>
+      
+      <div class="products max-w-7xl mx-auto flex items-center overflow-x-auto scroll-smooth"></div>
+      
+    </div>
+
+    <!-- For Mobile Versions -->
+    <div class="max-w-7xl mx-auto block md:hidden">
+      <button class="bg-[#3B3B3B78] text-white py-1 px-2 flex justify-center items-center mx-auto mt-10">Best Sellers</button>
+      <p class="text-3xl text-center mt-4">Most Shopped</p>
+
+      <div class="products max-w-7xl mx-auto flex items-center grid grid-cols-2 place-items-center md:px-0 md:gap-0 overflow-x-auto scroll-smooth">
+      </div>
+      <div class="md:hidden block flex justify-center my-10">
+        <button class="viewall-btn bg-[#3B3B3B] text-white px-4 py-1 cursor-pointer">
+          View All
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer id="footer">
+
+    <div class="md:flex hidden max-w-7xl mx-auto flex justify-between mt-14 pb-14">
+      <div class="flex flex-col mt-10 items-center">
+        <h2 class="text-[24px]">Resources</h2>
+        <div class="flex flex-col mt-4 items-center space-y-2 text-md">
+          <a>Find A Store</a>
+          <a>Become A Member</a>
+          <a>Send Us Feedback</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col mt-10 items-center">
+        <h2 class="text-[24px]" >Help</h2>
+        <div class="flex flex-col mt-4 items-center space-y-2 text-md">
+          <a>Get Help</a>
+          <a>Order Status</a>
+          <a>Delivery</a>
+          <a>Returns</a>
+          <a>Payment Options</a>
+          <a>Contact Us</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col mt-10 items-center">
+        <h2 class="text-[24px]">Company</h2>
+        <div class="flex flex-col mt-4 items-center space-y-2 text-md">
+          <a>About Us</a>
+          <a>News</a>
+          <a>Careers</a>
+          <a>Investors</a>
+          <a>Sustainability</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col mt-10 items-center">
+        <h2 class="text-[24px]">Follow Us</h2>
+        <div class="flex flex-col mt-4 items-center text-md"> 
+          <div class="space-x-4">
+            <a class="border border-orange-800 rounded-full py-1 px-1.5 cursor-pointer hover:scale-110 transition-transform"><i class="fa-brands fa-facebook"></i></a>
+            <a class="border border-orange-800 rounded-full py-1 px-1.5 cursor-pointer hover:scale-110 transition-transform"><i class="fa-brands fa-instagram"></i></a>
+            <a class="border border-orange-800 rounded-full py-1 px-1.5 cursor-pointer hover:scale-110 transition-transform"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <div class="w-[84px] h-[88px] mt-8">
+            <a><img class="w-full h-full" src="https://s3-alpha-sig.figma.com/img/fd77/4c97/1ba2c029ff09694eb391cd1b4e6accbb?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OXjGuidNruDSr64O~X8e~5O786yeNYW9dYjBhXX2fDOqoS7k43iYAO8lyjBQhU01XV3QSZr0fCPMhSFTLKTfTSycg840wNdv3sO5S0iBB42G5GXTzCpkXUmUzK6bo2UKss-0NS7QdslgP29pGcZFsrslXOnXwYGcrx71Z~IVYGI23zxOvsXK1PP1xeAW0-r7nbw9OL7Crro7ul~X7N0LscsZV-sZBEZiqKbSEf010BeSTnd0QwNv4Yq3x~Xbfr4F4VbobS3isbHF3w7TjS0OfXteFUrKdUYlx5ZBTEDrz7NG0CotKltwsHOnFtloFKAksr36NtKlHLrDQTKSAcFqfw__" /></a>
+          </div> 
+        </div>  
+      </div>
+    </div>
+
+    <!-- For Mobile Version -->
+    <div class="md:hidden block max-w-full mx-auto mt-12 pb-8 px-8">
+      <div class="flex flex-col gap-1 pt-8">
+        <div class="border-b-2 border-[#0000001F]">
+          <div class="flex justify-between items-center">
+            <button class="w-full text-left text-lg text-[#3B3B3B] py-2" onClick="showChildElements(this)">Resources</button>
+            <a class="change-icon"><i class="fa-solid fa-angle-down"></i></a>
+          </div>
+          <div class="panel hidden pl-4 mt-2 mb-2">
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Find A Store</a>
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Become A Member</a>
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Send Us Feedback</a>
+          </div>
+        </div>
+          
+        <div class="border-b-2 border-[#0000001F] mt-4">
+          <div class="flex justify-between items-center">
+            <button class="w-full text-left text-lg text-[#3B3B3B] py-2" onClick="showChildElements(this)">Help</button>
+            <a class="change-icon"><i class="fa-solid fa-angle-down"></i></a>
+          </div>
+            <div class="panel hidden pl-4 mt-2 mb-2">
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Get Help</a>
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Order Status</a>
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Delivery</a>
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Returns</a>
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Payment Options</a>
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Contact Us</a>
+          </div>
+        </div>
+          
+        <div class="border-b-2 border-[#0000001F] mt-4">
+          <div class="flex justify-between items-center">
+            <button class="w-full text-left text-lg text-[#3B3B3B] py-2" onClick="showChildElements(this)">Company</button>
+            <a class="change-icon"><i class="fa-solid fa-angle-down"></i></a>
+          </div>
+          <div class="panel hidden pl-4 mt-2 mb-2">
+            <a href="#" class="block py-1 text-sm text-[#00000070]">About Us</a>
+            <a href="#" class="block py-1 text-sm text-[#00000070]">News</a>
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Careers</a>
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Investors</a>
+            <a href="#" class="block py-1 text-sm text-[#00000070]">Sustainability</a>
+          </div>
+        </div>
+          
+        <div class="mt-4">
+          <button class="w-full text-left text-lg text-[#3B3B3B] py-2">Follow Us</button>
+          <div class="flex flex-row items-center justify-between mb-4">
+            <div class="flex space-x-4">
+              <a class="border border-gray-400 rounded-full py-1 px-2 hover:scale-105 transition-transform">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+              <a class="border border-gray-400 rounded-full py-1 px-2 hover:scale-105 transition-transform">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a class="border border-gray-400 rounded-full py-1 px-2 hover:scale-105 transition-transform">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+            <div class="logo-container mt-4">
+              <img class="w-[84px] h-[88px] mx-auto" src="https://s3-alpha-sig.figma.com/img/fd77/4c97/1ba2c029ff09694eb391cd1b4e6accbb?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OXjGuidNruDSr64O~X8e~5O786yeNYW9dYjBhXX2fDOqoS7k43iYAO8lyjBQhU01XV3QSZr0fCPMhSFTLKTfTSycg840wNdv3sO5S0iBB42G5GXTzCpkXUmUzK6bo2UKss-0NS7QdslgP29pGcZFsrslXOnXwYGcrx71Z~IVYGI23zxOvsXK1PP1xeAW0-r7nbw9OL7Crro7ul~X7N0LscsZV-sZBEZiqKbSEf010BeSTnd0QwNv4Yq3x~Xbfr4F4VbobS3isbHF3w7TjS0OfXteFUrKdUYlx5ZBTEDrz7NG0CotKltwsHOnFtloFKAksr36NtKlHLrDQTKSAcFqfw__" alt="logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </footer>
+
+  <!-- JavaScript Added -->
+  <script src="scripts/index.js"></script>
+
+
+</body>
+</html> 

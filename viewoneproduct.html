@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FontAwesome link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+    <!-- Add TailwindCSS in HTML -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Add CSS file to HTML -->
+    <link href="style.css" rel="stylesheet" >
+
+    <link rel="icon" href="https://s3-alpha-sig.figma.com/img/fd77/4c97/1ba2c029ff09694eb391cd1b4e6accbb?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gH26GYRE5i8Q20CnZVvMDcPYTBVEd81usxFxGNBSFjhQVOJhyVosnpe5i-Vvd6qxWo3gbI952zFbfwuoqNcu4OhFotEfrtdAwJ1HQLToKP295LlpnYEJVDP1tkGbkMisiPLKou8mCy7PuLYF98iuVeKGMmewzKeErgT2~MDoyoC~8bwAb6eKQZMaJLkrIp57ZzsOCDV5Zkz2YoPDbuFW9UPpGklaOqHzsUUdHb1Nn9o6wDN~HvQcIc-huRX-uHcrKU9sM0z5609cuG3sBC-pCHj3PbEKozrx7TXRXI8CMnGOKkusaCF-4BOl4Ydt0283Mpgf~z0WcfLowzjO2D-TMg__" >
+
+    <title>E-commerce</title>
+</head>
+<body>
+
+    <!-- NavBar -->
+    <header id="navBar">
+        <nav>
+        <div class="logo">
+            <a><img src="https://s3-alpha-sig.figma.com/img/fd77/4c97/1ba2c029ff09694eb391cd1b4e6accbb?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OXjGuidNruDSr64O~X8e~5O786yeNYW9dYjBhXX2fDOqoS7k43iYAO8lyjBQhU01XV3QSZr0fCPMhSFTLKTfTSycg840wNdv3sO5S0iBB42G5GXTzCpkXUmUzK6bo2UKss-0NS7QdslgP29pGcZFsrslXOnXwYGcrx71Z~IVYGI23zxOvsXK1PP1xeAW0-r7nbw9OL7Crro7ul~X7N0LscsZV-sZBEZiqKbSEf010BeSTnd0QwNv4Yq3x~Xbfr4F4VbobS3isbHF3w7TjS0OfXteFUrKdUYlx5ZBTEDrz7NG0CotKltwsHOnFtloFKAksr36NtKlHLrDQTKSAcFqfw__" alt="logo_of_website" /></a>
+        </div>
+
+        <!-- windows navbar -->
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="viewallproducts.html">Shop</a></li>
+            <li class="contact"><a href="contact.html">Contact</a></li>
+            <li><a href="new&featured">New & Featured</a></li>
+            <li><a href="sale">Sale</a></li>
+        </ul>
+
+        <!-- windows form -->
+        <div>
+            <form class="search-bar" action="/search" method="get">
+            <i class="fas fa-search"></i>
+            <input class="searchInput" type="text" name="search" placeholder="Search..." required/>
+            </form>
+        </div>
+
+        <!-- window icons -->
+        <div class="nav-icons">
+            <img class="w-8 h-8 cursor-pointer" src="https://img.icons8.com/?size=100&id=j1b8nUSGHfe0&format=png&color=000000" />
+            <a href="cartpage.html"><img class="w-7 h-7 cursor-pointer" src="https://img.icons8.com/?size=100&id=3686&format=png&color=000000" /></a>
+        </div>
+
+        <!-- mobile icons -->
+        <div class="mob-view">
+            <div class="mobile-nav-icons">
+                <img class="search-btn" src="https://img.icons8.com/?size=100&id=lwZinoeNcL3F&format=png&color=000000" />
+                <img src="https://img.icons8.com/?size=100&id=j1b8nUSGHfe0&format=png&color=000000" />
+                <a href="cartpage.html"><img src="https://img.icons8.com/?size=100&id=3686&format=png&color=000000"/></a>
+            </div> 
+    
+            <div class="toggle-menu">
+                <img src="https://img.icons8.com/?size=100&id=16247&format=png&color=000000" />
+            </div>
+        </div>
+
+        <!-- mobile navbar -->
+        <div class="mobile-nav-links">
+            <button class="close-button">
+            &times;
+            </button>
+            <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="viewallproducts.html">Shop</a></li>
+            <li class="contact"><a href="contact.html">Contact</a></li>
+            <li><a href="new&featured">New & Featured</a></li>
+            <li><a href="sale">Sale</a></li>
+            </ul>
+        </div>  
+    </nav>
+
+    </header>
+
+    <!-- Search Form For Mobile View -->
+    <div class="hidden show-mobile-form bg-[#CEC5BC82] top-0 w-full h-20 flex justify-center items-center">
+        <form class="mobile-search-bar space-x-4" method="get">
+        <i class="absolute fas fa-search icon"></i>
+        <input class="w-full h-full" type="text" name="search" placeholder="Search..."  required/>
+        <button type="submit" class="search-btn bg-green-400 py-1 px-2 rounded text-white">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        </form>
+    </div>
+
+    <!-- See Only One products -->
+    <section>
+        <div class="view-one-product max-w-7xl mx-auto mt-10"></div>
+        
+    </section>
+
+    <!-- Static demo products -->
+    <section class="max-w-7xl mx-auto mt-14">
+        <div class="flex flex-col justify-center mb-14 mx-4 md:mx-0">
+            <h1 class="text-[24px] md:text-[38px] text-[#3B3B3B] mb-10">How Others are wearing it</h1>
+            <div class="flex flex-row items-center gap-8">
+                <div class="w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="hidden md:block mx-auto w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="hidden md:block mx-auto w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="hidden md:block mx-auto w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+            </div>
+        </div>
+
+        <div class="flex flex-col justify-center mb-14 mx-4 md:mx-0">
+            <h1 class="text-[24px] md:text-[38px] text-[#3B3B3B] mb-10">Complete the look</h1>
+            <div class="flex flex-row items-center gap-8">
+                <div class="w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="hidden md:block w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="hidden md:block w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="hidden md:block w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto border-b-2 border-b-[#00000030] mt-8 mb-8"></div>
+
+        <div class="flex flex-col justify-center mb-14 mx-4 md:mx-0">
+            <h1 class="text-[24px] md:text-[38px] text-[#3B3B3B] mb-10">You Might Also Like</h1>
+            <div class="flex flex-row items-center gap-8">
+                <div class="w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="hidden md:block w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="hidden md:block w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+                <div class="hidden md:block w-[256px] h-[300px] bg-[#D9D9D9]"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <!-- For Window -->
+        <div class="md:flex hidden max-w-7xl mx-auto flex justify-between mt-14 pb-14">
+            <div class="flex flex-col mt-10 items-center">
+                <h2 class="text-[24px]">Resources</h2>
+                <div class="flex flex-col mt-4 items-center space-y-2 text-md">
+                <a>Find A Store</a>
+                <a>Become A Member</a>
+                <a>Send Us Feedback</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col mt-10 items-center">
+                <h2 class="text-[24px]" >Help</h2>
+                <div class="flex flex-col mt-4 items-center space-y-2 text-md">
+                <a>Get Help</a>
+                <a>Order Status</a>
+                <a>Delivery</a>
+                <a>Returns</a>
+                <a>Payment Options</a>
+                <a>Contact Us</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col mt-10 items-center">
+                <h2 class="text-[24px]">Company</h2>
+                <div class="flex flex-col mt-4 items-center space-y-2 text-md">
+                <a>About Us</a>
+                <a>News</a>
+                <a>Careers</a>
+                <a>Investors</a>
+                <a>Sustainability</a>
+                </div>
+            </div>
+
+            <div class="flex flex-col mt-10 items-center">
+                <h2 class="text-[24px]">Follow Us</h2>
+                <div class="flex flex-col mt-4 items-center text-md"> 
+                <div class="space-x-4">
+                    <a class="border border-orange-800 rounded-full py-1 px-1.5 cursor-pointer hover:scale-110 transition-transform"><i class="fa-brands fa-facebook"></i></a>
+                    <a class="border border-orange-800 rounded-full py-1 px-1.5 cursor-pointer hover:scale-110 transition-transform"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="border border-orange-800 rounded-full py-1 px-1.5 cursor-pointer hover:scale-110 transition-transform"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <div class="w-[84px] h-[88px] mt-8">
+                    <a><img class="w-full h-full" src="https://s3-alpha-sig.figma.com/img/fd77/4c97/1ba2c029ff09694eb391cd1b4e6accbb?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OXjGuidNruDSr64O~X8e~5O786yeNYW9dYjBhXX2fDOqoS7k43iYAO8lyjBQhU01XV3QSZr0fCPMhSFTLKTfTSycg840wNdv3sO5S0iBB42G5GXTzCpkXUmUzK6bo2UKss-0NS7QdslgP29pGcZFsrslXOnXwYGcrx71Z~IVYGI23zxOvsXK1PP1xeAW0-r7nbw9OL7Crro7ul~X7N0LscsZV-sZBEZiqKbSEf010BeSTnd0QwNv4Yq3x~Xbfr4F4VbobS3isbHF3w7TjS0OfXteFUrKdUYlx5ZBTEDrz7NG0CotKltwsHOnFtloFKAksr36NtKlHLrDQTKSAcFqfw__" /></a>
+                </div> 
+                </div>  
+            </div>
+        </div>
+
+        <!-- For Mobile Version -->
+        <div class="md:hidden block max-w-full mx-auto mt-12 pb-8 px-8">
+            <div class="flex flex-col gap-1 pt-8">
+                <div class="border-b-2 border-[#0000001F]">
+                    <div class="flex justify-between items-center">
+                        <button class="w-full text-left text-lg text-[#3B3B3B] py-2" onClick="showChildElements(this)">Resources</button>
+                        <a class="change-icon"><i class="fa-solid fa-angle-down"></i></a>
+                    </div>
+                    <div class="panel hidden pl-4 mt-2 mb-2">
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Find A Store</a>
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Become A Member</a>
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Send Us Feedback</a>
+                    </div>
+                </div>
+                
+                <div class="border-b-2 border-[#0000001F] mt-4">
+                    <div class="flex justify-between items-center">
+                        <button class="w-full text-left text-lg text-[#3B3B3B] py-2" onClick="showChildElements(this)">Help</button>
+                        <a class="change-icon"><i class="fa-solid fa-angle-down"></i></a>
+                    </div>
+
+                    <div class="panel hidden pl-4 mt-2 mb-2">
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Get Help</a>
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Order Status</a>
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Delivery</a>
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Returns</a>
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Payment Options</a>
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="border-b-2 border-[#0000001F] mt-4">
+                    <div class="flex justify-between items-center">
+                        <button class="w-full text-left text-lg text-[#3B3B3B] py-2" onClick="showChildElements(this)">Company</button>
+                        <a class="change-icon"><i class="fa-solid fa-angle-down"></i></a>
+                    </div>
+                    <div class="panel hidden pl-4 mt-2 mb-2">
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">About Us</a>
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">News</a>
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Careers</a>
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Investors</a>
+                        <a href="#" class="block py-1 text-sm text-[#00000070]">Sustainability</a>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <button class="w-full text-left text-lg text-[#3B3B3B] py-2">Follow Us</button>
+
+                    <div class="flex flex-row items-center justify-between mb-4">
+                        <div class="flex space-x-4">
+                        <a class="border border-gray-400 rounded-full py-1 px-2 hover:scale-105 transition-transform">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a class="border border-gray-400 rounded-full py-1 px-2 hover:scale-105 transition-transform">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a class="border border-gray-400 rounded-full py-1 px-2 hover:scale-105 transition-transform">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        </div>
+                        <div class="logo-container mt-4">
+                        <img class="w-[84px] h-[88px] mx-auto" src="https://s3-alpha-sig.figma.com/img/fd77/4c97/1ba2c029ff09694eb391cd1b4e6accbb?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OXjGuidNruDSr64O~X8e~5O786yeNYW9dYjBhXX2fDOqoS7k43iYAO8lyjBQhU01XV3QSZr0fCPMhSFTLKTfTSycg840wNdv3sO5S0iBB42G5GXTzCpkXUmUzK6bo2UKss-0NS7QdslgP29pGcZFsrslXOnXwYGcrx71Z~IVYGI23zxOvsXK1PP1xeAW0-r7nbw9OL7Crro7ul~X7N0LscsZV-sZBEZiqKbSEf010BeSTnd0QwNv4Yq3x~Xbfr4F4VbobS3isbHF3w7TjS0OfXteFUrKdUYlx5ZBTEDrz7NG0CotKltwsHOnFtloFKAksr36NtKlHLrDQTKSAcFqfw__" alt="logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </footer>
+
+    <!-- JavaScript Added -->
+    <script src="scripts/index.js"></script>
+
+    <!-- JavaScript Added -->
+    <script src="scripts/viewoneproduct.js"></script>
+    
+    
+</body>
+</html>
